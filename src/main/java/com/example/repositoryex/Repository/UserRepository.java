@@ -16,4 +16,7 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     List<User> findUsersByRole(String role);
 
     List<User> findUsersByAgeGreaterThanEqual(Integer age);
+
+    @Query("select u from User u where u.age>=?1")
+    List<User> findUsersByAgeMoreThanX(Integer age);
 }

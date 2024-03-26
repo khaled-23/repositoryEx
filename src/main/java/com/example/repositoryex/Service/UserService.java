@@ -69,5 +69,6 @@ public class UserService {
 
     public List<User> getUserByAgeGreaterThanAndEqual(Integer age){
         return userRepository.findUsersByAgeGreaterThanEqual(age);
+//        return userRepository.findUsersByAgeMoreThanX(age);
     }
 }
